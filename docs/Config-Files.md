@@ -56,19 +56,19 @@ database:
 # General settings
 general:
   # The maximum homes a user can create. Override with the huskhomes.max_homes.<number> permission.
-  max_homes: 10
+  max_homes: 1
   # The maximum public homes a user can create. Override with the huskhomes.max_public_homes.<number> permission.
-  max_public_homes: 10
+  max_public_homes: 1
   # Whether permission limits (i.e. huskhomes.max_homes.<number>) should stack if the user inherits multiple nodes.
   stack_permission_limits: false
   # Whether users require a permission (huskhomes.command.warp.<warp_name>) to use warps
   permission_restrict_warps: false
   # How long a player has to stand still and not take damage for when teleporting (in seconds) 
-  teleport_warmup_time: 5
+  teleport_warmup_time: 0
   # Whether the teleport warmup timer should be cancelled if the player takes damage
-  teleport_warmup_cancel_on_damage: true
+  teleport_warmup_cancel_on_damage: false
   # Whether the teleport warmup timer should be cancelled if the player moves
-  teleport_warmup_cancel_on_move: true
+  teleport_warmup_cancel_on_move: false
   # Where the teleport warmup timer should display (CHAT, ACTION_BAR, TITLE, SUBTITLE or NONE)
   teleport_warmup_display: ACTION_BAR
   # How long the player should be invulnerable for after teleporting (in seconds)
@@ -104,7 +104,7 @@ general:
   # Settings for the /back command
   back_command:
     # Whether /back should work to teleport the user to where they died
-    return_by_death: true
+    return_by_death: false
     # Whether /back should work with other plugins that use the PlayerTeleportEvent (can conflict)
     save_on_teleport_event: false
   # Settings for sound effects
@@ -190,7 +190,7 @@ map_hook:
   # Show warps on the web map
   show_warps: true
 # List of commands to disable (e.g. ['/home', '/warp'] to disable /home and /warp)
-disabled_commands: []
+disabled_commands: ["/rtp","/spawn"]
 ```
 </details>
 
